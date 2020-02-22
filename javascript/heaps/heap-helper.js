@@ -8,7 +8,7 @@ class HeapHelper {
   }
 
   static getParentIndex(idx) {
-    return Math.ceil((idx - 2) / 2);
+    return Math.floor((idx - 1) / 2);
   }
 
   static heapArrSwapper(heapArr, idx1, idx2) {

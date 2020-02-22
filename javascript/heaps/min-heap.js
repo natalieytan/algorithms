@@ -70,7 +70,6 @@ class MinHeap {
       heap.numberOfChildren(idx) == 0 ||
       heap.getCurrentNode(idx) < heap.getSmallestChild(idx)
     ) {
-      console.log(heap.heapArr);
       return heap;
     } else {
       const smallestChildIdx = heap.getSmallestChildIdx(idx);
@@ -85,7 +84,7 @@ class MinHeap {
 
   static heapBubbleUpper(heap, idx) {
     const parentIdx = HeapHelper.getParentIndex(idx);
-    const invalidIdxs = idx > heap.heapArr.length || parentIdx < 0;
+    const invalidIdxs = idx > heap.heapArr.length - 1 || parentIdx < 0;
     if (invalidIdxs || heap.getParent(idx) < heap.getCurrentNode(idx)) {
       return heap;
     } else {
