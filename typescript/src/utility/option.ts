@@ -1,1 +1,1 @@
-export type Option<A> = A | undefined;
+export type Option<A> = A | null;
